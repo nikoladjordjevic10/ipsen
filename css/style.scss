@@ -10,3 +10,93 @@ body, html {
   line-height: 1.6;
   color: $light-grey;
 }
+
+// HEADER Styling
+
+header {
+  background-color: $bg-light;
+  .logo img {
+    max-height: 5rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    color: $dark-grey;
+    text-transform: uppercase;
+    &:hover {
+      color: $light-grey;
+      transition: color 0.2s ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  header {
+    display: none;
+  }
+  header.headerInvisible {
+    display: block;
+  }
+}
+
+// Invisible HEADER Styling
+
+.headerInvisible {
+  display: none;
+  background-color: $bg-light;
+  .logo img {
+    max-height: 5rem;
+  }
+}
+
+// Hamburger Icon Styling
+
+  #nav-icon {
+    width: 40px;
+    height: 35px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background: $grey;
+      border-radius: 7px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2), &:nth-child(3){
+        top: 12px;
+      }
+      &:nth-child(4) {
+        top: 24px;
+      }
+    }
+  }
+
+  #nav-icon.open {
+    span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2){
+      transform: rotate(45deg);
+    }
+    span:nth-child(3){
+      transform: rotate(-45deg);
+    }
+    span:nth-child(4){
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+  
