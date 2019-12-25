@@ -25,7 +25,8 @@ header {
     text-transform: uppercase;
     &:hover {
       color: $light-grey;
-      transition: color 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.05);
     }
   }
 }
@@ -52,6 +53,7 @@ header {
 // Hamburger Icon Styling
 
   #nav-icon {
+    z-index: 3;
     width: 40px;
     height: 35px;
     position: relative;
@@ -99,4 +101,119 @@ header {
       left: 50%;
     }
   }
+
+// Invisibile SideBar Styling
   
+.hiddenSidebar {
+  transition: all .35s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  cursor: pointer;
+  nav {
+    transition: all 0s;
+    position: fixed;
+    right: -5000px;
+  }
+}
+
+.hiddenSidebar.expanded {
+  transition: all .35s;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  right: 0;
+  background-color: $bg-light;
+  nav {
+     transition: all 0s;
+     position: relative;
+     right: 0;
+     top:20%;
+     z-index: 2;
+  }
+  a {
+     transition: all .25s;
+     text-decoration: none;
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     color: $dark-grey;
+     display:block;
+     &:hover {
+        transition: all .25s;
+        letter-spacing: 1px;
+        color: $light-grey;
+     }
+  }
+  
+}
+
+// Footer Styling
+
+.footerUpper {
+  min-height: 5rem;
+  background-color: $red;
+  color: $bg-light;
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .contact {
+    p:first-child {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .footerUpper p {
+    text-align: center;
+  }
+}
+
+.footerLower {
+  min-height: 5rem;
+  background-color: $grey;
+  color: $bg-light;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .info {
+    text-align: center;
+    ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    p:first-child {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.footerCredits {
+  height: 3rem;
+  background-color: $dark-grey;
+  text-align: center;
+  p {
+    margin: 0;
+    padding-top: 0.8rem;
+    a {
+      text-decoration: none;
+      color: $light-grey;
+      transition: color 0.25s ease;
+      &:hover {
+        color: $red;
+        transition: color 0.25s ease;
+      }
+    }
+  }
+}
