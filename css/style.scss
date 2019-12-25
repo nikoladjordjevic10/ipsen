@@ -9,6 +9,7 @@ body, html {
   font-size: 16px;
   line-height: 1.6;
   color: $light-grey;
+  height: 100%;
 }
 
 // HEADER Styling
@@ -23,6 +24,7 @@ header {
     margin-right: 0.5rem;
     color: $dark-grey;
     text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
     &:hover {
       color: $light-grey;
       transition: all 0.2s ease-in-out;
@@ -152,6 +154,65 @@ header {
   
 }
 
+// M A I N  C O N T E N T
+// Hero Image Styling
+
+.heroImage {
+  background-image: url('../images/background-black.jpg');
+  min-height: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .heroText {
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+    color: $bg-light;
+    .heading {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 810px){
+  .heroImage .heroText {
+    .heading {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .heroImage .heroText {
+    .heading {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 415px){
+  .heroImage .heroText {
+    .heading {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+
 // Footer Styling
 
 .footerUpper {
@@ -200,7 +261,7 @@ header {
 }
 
 .footerCredits {
-  height: 3rem;
+  min-height: 3rem;
   background-color: $dark-grey;
   text-align: center;
   p {
