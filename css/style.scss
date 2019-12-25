@@ -10,6 +10,18 @@ body, html {
   line-height: 1.6;
   color: $light-grey;
   height: 100%;
+  overflow-x: scroll;
+}
+
+p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &:hover {
+  text-decoration: none;
+  }
 }
 
 // HEADER Styling
@@ -157,6 +169,20 @@ header {
 // M A I N  C O N T E N T
 // Hero Image Styling
 
+.content {
+ 
+  // overflow: hidden;
+  animation: 1.5s ease forwards slideFromRight;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .heroImage {
   background-image: url('../images/background-black.jpg');
   min-height: 100%;
@@ -277,4 +303,72 @@ header {
       }
     }
   }
+}
+
+// C O N T A C T   P A G E
+
+.stripe {
+  min-height: 1rem;
+  width: 100%;
+  background-color: $red;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-grey;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.contactForm .info {
+  p.heading {
+    color: $red;
+  }
+  a {
+    color: $light-grey;
+    transition: color 0.25s ease;
+    &:hover {
+      color: $dark-grey;
+      transition: color 0.25s ease;
+    }
+  }
+}
+
+.contactForm .fields {
+  .required {
+    color: $red;
+    font-size: 1.2rem;
+  }
+  label {
+    color: $grey;
+  }
+  ::placeholder, textarea ::placeholder {
+    color: $light-grey;
+    opacity: 0.6;
+  }
+  .form-control, .form-control textarea {
+    border-color: $grey;
+    &:focus {
+    border-color: $grey;
+    box-shadow: 0 0 0 0.1rem rgba(161,159,159,0.8);
+    }
+  }
+  button.btn.btn-primary {
+    background-color: $grey;
+    margin-bottom: 7rem;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .contactForm .fields button.btn.btn-primary, .contactForm .info {
+    margin-bottom: 3rem;
+  }
+  
 }
