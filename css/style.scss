@@ -24,6 +24,18 @@ a {
   }
 }
 
+.btn.btn-primary {
+  background-color: $red;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  transition: all 0.25s ease;
+  &:hover {
+    opacity: 0.6;
+    transition: all 0.25s ease;
+  }
+}
+
 // HEADER Styling
 
 header {
@@ -170,8 +182,6 @@ header {
 // Hero Image Styling
 
 .content {
- 
-  // overflow: hidden;
   animation: 1.5s ease forwards slideFromRight;
 }
 
@@ -201,6 +211,7 @@ header {
     .heading {
       font-size: 3rem;
       text-transform: uppercase;
+      line-height: 1.2;
     }
   }
 }
@@ -249,6 +260,14 @@ header {
     padding: 0;
     margin: 0;
     font-size: 0.8rem;
+    a, a:visited {
+      color: $bg-light;
+      transition: all 0.15s ease-in;
+    }
+    a:hover {
+      color: $grey;
+      transition: all 0.15s ease-in;
+    }
   }
   .contact {
     p:first-child {
@@ -349,20 +368,15 @@ h2 {
   }
   .form-control, .form-control textarea {
     border-color: $grey;
+    border-radius: 0;
     &:focus {
-    border-color: $grey;
-    box-shadow: 0 0 0 0.1rem rgba(161,159,159,0.8);
+      border-color: $grey;
+      box-shadow: 0 0 0 0.1rem rgba(161,159,159,0.8);
     }
   }
   button.btn.btn-primary {
-    background-color: $grey;
     margin-bottom: 7rem;
-    margin-top: 1rem;
-    border: none;
-    padding: 0.5rem 2rem 0.5rem 2rem;
-    &:hover {
-      background-color: $light-grey;
-    }
+    margin-top: 2rem;
   }
 }
 
@@ -371,4 +385,23 @@ h2 {
     margin-bottom: 3rem;
   }
   
+}
+
+// Used Equipment Page Styling
+
+.card {
+  border-radius: 0;
+  padding: 0;
+  .card-title, .card-text span {
+    color: $dark-grey;
+    text-transform: uppercase;
+  }
+  a>.card-img-top {
+    filter: brightness(100%);
+    transition: all 0.25s ease-in;
+    &:hover {
+      filter: brightness(90%);
+      transition: all 0.25s ease-in;
+    }
+  }
 }

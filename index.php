@@ -3,7 +3,7 @@
 
 <section class="heroImage content">
   <div class="heroText">
-    <p class="heading">IBP Termotehnika</p>
+    <p class="heading mb-3">IBP Termotehnika</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium deserunt quaerat, accusantium illo harum maiores laborum iusto perspiciatis delectus asperiores incidunt magnam.</p>
   </div>
 </section>

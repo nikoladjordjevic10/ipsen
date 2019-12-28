@@ -8,7 +8,7 @@
           </div>
           <div class="contact p-3">
             <p><i class="far fa-envelope pb-2 pr-3"></i>Email Us</p>
-            <p>pokerznik@sezampro.rs</p>
+            <p><a href="#">pokerznik@sezampro.rs</a></p>
           </div>
           <div class="contact p-3">
             <p><i class="far fa-clock pb-2 pr-3"></i>Opening Hours</p>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="footerCredits">
-      <p><a href="#">IBP Termotehnika</a> <?php echo date('Y') ?>. All Rights Reserved</p>
+      <p><a href="index.php">IBP Termotehnika</a> <?php echo date('Y') ?>. All Rights Reserved</p>
     </div>
   </footer> <!-- End of Footer -->
 
