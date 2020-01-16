@@ -13,19 +13,19 @@
 </head>
 
 <body>
-   <header class="shadow"> <!-- Start of Invisible Header -->
+   <header class="shadow"> <!-- Start of Header -->
     <div class="container">
       <div class="row flex-column justify-content-xl-between justify-content-center align-items-center flex-lg-row">
         <div class="logo p-3">
           <a href="index.php"><img src="images/logo.png" alt="logo"></a>
         </div>
         <nav class="nav align-items-center d-flex flex-column flex-lg-row py-3">
-          <a class="nav-link" href="index.php">Home</a>
-          <a class="nav-link" href="#">About Us</a>
-          <a class="nav-link" href="#">Ipsen</a>
-          <a class="nav-link" href="usedEquipment.php">Used Equipment</a>
-          <a class="nav-link" href="#">Other Products</a>
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="main-link nav-link" href="index.php">Home</a>
+          <a class="main-link nav-link" href="#">About Us</a>
+          <a class="main-link nav-link" href="#">Ipsen</a>
+          <a class="main-link nav-link" href="usedEquipment.php">Used Equipment</a>
+          <a class="main-link nav-link" href="#">Other Products</a>
+          <a class="main-link nav-link" href="contact.php">Contact</a>
         </nav>
       </div>
     </div>
