@@ -89,55 +89,55 @@ header {
 
 // Hamburger Icon Styling
 
-  #nav-icon {
-    z-index: 3;
-    width: 40px;
-    height: 35px;
-    position: relative;
+#nav-icon {
+  z-index: 3;
+  width: 40px;
+  height: 35px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: $grey;
+    border-radius: 7px;
+    opacity: 1;
+    left: 0;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    span {
-      display: block;
-      position: absolute;
-      height: 5px;
-      width: 100%;
-      background: $grey;
-      border-radius: 7px;
-      opacity: 1;
-      left: 0;
-      transform: rotate(0deg);
-      transition: .25s ease-in-out;
-      &:nth-child(1) {
-        top: 0px;
-      }
-      &:nth-child(2), &:nth-child(3){
-        top: 12px;
-      }
-      &:nth-child(4) {
-        top: 24px;
-      }
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3){
+      top: 12px;
+    }
+    &:nth-child(4) {
+      top: 24px;
     }
   }
+}
 
-  #nav-icon.open {
-    span:nth-child(1) {
-      top: 18px;
-      width: 0%;
-      left: 50%;
-    }
-    span:nth-child(2){
-      transform: rotate(45deg);
-    }
-    span:nth-child(3){
-      transform: rotate(-45deg);
-    }
-    span:nth-child(4){
-      top: 18px;
-      width: 0%;
-      left: 50%;
-    }
+#nav-icon.open {
+  span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
   }
+  span:nth-child(2){
+    transform: rotate(45deg);
+  }
+  span:nth-child(3){
+    transform: rotate(-45deg);
+  }
+  span:nth-child(4){
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+}
 
 // Invisibile SideBar Styling
   
@@ -170,7 +170,7 @@ header {
      transition: all 0s;
      position: relative;
      right: 0;
-     top:20%;
+     top: 20%;
      z-index: 2;
   }
   a {
@@ -179,7 +179,7 @@ header {
      font-size: 1.5rem;
      text-transform: uppercase;
      color: $dark-grey;
-     display:block;
+     display: block;
      &:hover {
         transition: all .25s;
         letter-spacing: 1px;
@@ -204,6 +204,7 @@ header {
     transform: translateX(0);
   }
 }
+
 .heroImage {
   background-image: url('../images/background-black.jpg');
   min-height: 100%;
@@ -219,6 +220,7 @@ header {
     left: 25%;
     text-align: center;
     color: $bg-light;
+    font-size: 1.1rem;
     .heading {
       font-size: 3rem;
       text-transform: uppercase;
@@ -304,7 +306,7 @@ header {
   }
   .info {
     text-align: center;
-    ul{
+    ul {
       list-style-type: none;
       padding: 0;
     }
@@ -312,6 +314,7 @@ header {
       text-transform: uppercase;
       font-size: 1.3rem;
       letter-spacing: 1px;
+      margin-bottom: 0.5rem;
     }
   }
 }
@@ -417,6 +420,11 @@ h2 {
     color: $dark-grey;
     text-transform: uppercase;
   }
+  .card-img-top {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    // object-fit: cover;
+  }
   a>.card-img-top {
     filter: brightness(100%);
     transition: all 0.25s ease-in;
@@ -450,20 +458,17 @@ span.details {
     height: 6rem;
     list-style-type: none;
     margin: 1rem 1rem 1rem 0;
+    padding: 0.5rem;
     border: 1px solid rgba(0,0,0,.125);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:hover {
-      overflow: visible;
-    }
     img {
       width: 100%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       cursor: pointer;
     }
     .selected {
       opacity: 0.5;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
   }
 }
@@ -476,10 +481,11 @@ span.details {
   overflow: hidden;
   border: 1px solid rgba(0,0,0,.125);
   img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     margin-right: 1rem;
-    object-fit: contain;
-    transition: transform 0.8s ease-in-out;
+    object-fit: cover;
+    transition: transform 0.7s ease-in-out;
   }
 }
 
@@ -489,12 +495,107 @@ span.details {
     text-transform: uppercase;
   }
   table.table {
+    table-layout: fixed;
     th {
       color: $dark-grey;
       text-transform: uppercase;
     }
     td {
       color: $light-grey;
+    }
+  }
+}
+
+// Other Products Page Styling
+
+table.otherProducts {
+  th, td {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+nav.otherProducts {
+    background-color: $grey!important;
+  .dropdown-toggle::after { 
+    content: none; 
+  } 
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform:translateY(0rem);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  .slideIn {
+    animation-name: slideIn;
+  }
+  .animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+
+  .navbar-nav.main-nav {
+    li.nav-item a {
+      color: $bg-light;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+        color: $dark-grey;
+      }
+      &:focus-within {
+        color: $dark-grey;
+        transform: scale(1.05);
+      }
+    }
+    li.dropdown-submenu a {
+      color: $bg-light;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+    .dropdown-menu {
+      background-color: $grey;
+      li:hover {
+        background-color: $grey;
+      }
+    }
+  }
+  
+  .dropdown-submenu {
+    position: relative;
+    
+  }
+
+  .dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -9px;
+    background-color: $grey;
+  }
+
+  .dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+  }
+
+}
+
+@media (max-width: 1200px){
+  nav.otherProducts .navbar-nav.main-nav li.nav-item a {
+    &:hover, &:focus-within {
+      transform: scale(1.00);
     }
   }
 }

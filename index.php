@@ -4,7 +4,7 @@
 <section class="heroImage content">
   <div class="heroText">
     <p class="heading mb-3">IBP Termotehnika</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium deserunt quaerat, accusantium illo harum maiores laborum iusto perspiciatis delectus asperiores incidunt magnam.</p>
+    <p>Is a family business with over 20 years of experience as a supplier in the heat treatment industry.</p>
   </div>
 </section>
 

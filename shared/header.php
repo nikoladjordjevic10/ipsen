@@ -24,7 +24,7 @@
           <a class="main-link nav-link" href="#">About Us</a>
           <a class="main-link nav-link" href="#">Ipsen</a>
           <a class="main-link nav-link" href="usedEquipment.php">Used Equipment</a>
-          <a class="main-link nav-link" href="#">Other Products</a>
+          <a class="main-link nav-link" href="otherProducts.php">Other Products</a>
           <a class="main-link nav-link" href="contact.php">Contact</a>
         </nav>
       </div>

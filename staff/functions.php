@@ -30,7 +30,7 @@ function formatSentence($str){
   $sentences = preg_split('/([.?!]+)/', $str, -1, PREG_SPLIT_NO_EMPTY|PREG_SPLIT_DELIM_CAPTURE);
   $new_string = '';
   foreach ($sentences as $key => $sentence) {
-      $new_string .= ($key & 1) == 0?
+      $new_string .= ($key & 1) == 0 ?
           ucfirst(strtolower(trim($sentence))) :
           $sentence.' ';
   }

@@ -19,7 +19,11 @@ $(document).ready(function(){
 
 // singleEquipment Page Images Slider
 $(document).ready(function() {
-  $(".imageBig img").css("transform", "translateX(0px)");
+	$(window).resize(function(){
+    $(".imageBig img").css("transform", "translateX(0px)");
+    $(".imagesNav img").removeClass("selected");
+    $(".imagesNav img").first().addClass("selected");
+  });
   $(".imagesNav").on('click', 'img', function() {
     var indexImg = $(this).parent().index();
     var imgWidth = $(".imageBig img").width() + 16;

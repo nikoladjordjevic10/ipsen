@@ -25,7 +25,6 @@
       }
     }
 
-    // print_r($singleData['images']);
   }
 
 ?>
@@ -48,7 +47,7 @@
       <div class="col-md-7 d-flex flex-wrap flex-xl-nowrap images">
         <ol class="imagesNav d-flex flex-xl-column flex-wrap order-xl-0 order-1">
           <?php foreach($singleData['images'] as $path => $alt): ?> 
-            <li class="shadow"><img src="<?= $path; ?>" alt="<?= $alt; ?>" class="<?php if(array_key_first($singleData['images']) === $path){echo 'selected';} ?>">
+            <li class="shadow"><img src="<?= $path; ?>" alt="<?= $alt; ?>" class="<?php if(array_key_first($singleData['images']) == $path){echo 'selected';} ?>">
           <?php endforeach; ?>
         </ol>
         <div class="imageBig d-flex justify-content-between shadow">
@@ -58,7 +57,7 @@
         </div>
       </div>
       
-      <div class="col-md-5 mt-5 mt-md-3 pl-md-5 singleDetails">
+      <div class="col-md-5 mt-5 mt-md-3 pl-3 pl-lg-5 singleDetails">
         <table class="table">
           <tr>
             <th>Make</th>

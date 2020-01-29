@@ -21,18 +21,18 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-12 info p-3 py-md-4 pl-md-0">
-            <p>Over 30 years experience</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum totam repellat aspernatur sapiente at fugiat tempora placeat vel corporis officiis magnam dolorum voluptatibus eligendi, odit dolores ipsam, tempore dolore.</p>
+            <p>Over 20 years experience</p>
+            <p>IBP Termotehnika doo is a family business with over 20 years of experience as a supplier in the heat treatment industry. We strive to provide our customers with the best possible solutions and equipment for their heat treatment needs.</p>
           </div>
           <div class="col-lg-4 col-md-12 info py-md-4 p-3">
             <p>Our Services</p>
             <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Ipsen</li>
-              <li>Used Equipment</li>
-              <li>Other Products</li>
-              <li>Contact</li>
+              <li>New &amp; Used equipment</li>
+              <li>Services</li>
+              <li>Original spare parts</li>
+              <li>High-quality baskets</li>
+              <li>Grids</li>
+              <li>Stop off coatings</li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-12 info py-md-4 p-3">
