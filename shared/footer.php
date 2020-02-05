@@ -19,12 +19,13 @@
     </div>  
     <div class="footerLower">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12 info p-3 py-md-4 pl-md-0">
+        <div class="row justify-content-between">
+          
+          <div class="col-lg-4 col-md-12 info py-md-4 p-4">
             <p>Over 20 years experience</p>
             <p>IBP Termotehnika doo is a family business with over 20 years of experience as a supplier in the heat treatment industry. We strive to provide our customers with the best possible solutions and equipment for their heat treatment needs.</p>
           </div>
-          <div class="col-lg-4 col-md-12 info py-md-4 p-3">
+          <div class="col-lg-3 col-md-12 info py-md-4 p-4">
             <p>Our Services</p>
             <ul>
               <li>New &amp; Used equipment</li>
@@ -35,9 +36,9 @@
               <li>Stop off coatings</li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-12 info py-md-4 p-3">
+          <div class="col-lg-3 col-md-12 info py-md-4 p-4">
             <p>Visit Us</p>
-            <p>Nehruova 56/15, 11073 Novi Beograd, Srbija</p>
+            <p>Nehruova 56/15, <br> 11073 Novi Beograd, Srbija</p>
           </div>
         </div>
       </div>

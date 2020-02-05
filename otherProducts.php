@@ -4,11 +4,47 @@
 <div class="content">
   <div class="stripe"></div>
   <h2>Other Products</h2>
-  
-    <div class="row mb-5">
-      <nav class="navbar navbar-expand-xl navbar-dark w-100 otherProducts">
+  <div class="row mb-3 p-3 p-sm-0">
+    <div class="container otherProductsInfo">
+      <p class="mb-4">IBP Termotehnika doo offers only the highest quality products for your heat treatment needs such as:</p>
+      <ul class="mb-5">
+        <li><a href="#grids">Grids &amp; Baskets</a></li>
+        <li><a href="#coatings">Stop off coatings</a></li>
+        <li>Quenching oils</li>
+        <li>And others</li>
+      </ul>
+      
+      <div id="grids">
+        <h4 class="mb-4">Grids &amp; Baskets</h4>
+        <p class="mb-4">We can provide you with high-quality cast baskets, grids and other types of loading materials for all types of furnaces. Just give us Your furnace info and/or drawing of grids or baskets that you need!</p>
         <div class="container">
+          <div class="row justify-content-around p-3 p-md-0">
 
+            <div class="col-md-5 p-0 shadow gridsBaskets">
+              <img src="images/grid.jpg" alt="grid.jpg">
+              <figcaption>Heat Treatment Grids</figcaption>
+            </div>
+            <div class="col-md-5 p-0 mt-5 mt-md-0 shadow gridsBaskets">
+              <img src="images/basket.jpg" alt="basket.jpg">
+              <figcaption>Heat Treatment Baskets</figcaption>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <div id="coatings" class="mb-4">
+        <h4 class="mb-4">Stop off coatings</h4>
+        <p>When it comes to stop-off coatings we can provide You with high-quality coatings from both AVION and DAM Härtetechnik companies for all Your heat treatment needs: <br>
+          If You are not sure which type of coating you need please use the diagram (bellow this text) to find the right product for your needs!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row p-3 p-sm-0">
+    <nav class="navbar navbar-expand-xl navbar-dark w-100 otherProducts">
+      <div class="container">
         <a class="navbar-brand" href="http://www.dam-gmbh.de/en/" target="_blank">LUISO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -87,7 +123,7 @@
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Washable after warm treatment?
+                    Washable after heat treatment?
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -118,7 +154,7 @@
                               </a>
                               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                                 <li class="dropdown-item dropdown-submenu py-0 px-2">
-                                  <a class="nav-link dropdown-toggle" href="http://www.dam-gmbh.de/en/gas-carburising/luiso-w30.html" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false" target="_blank">
+                                  <a class="nav-link dropdown-toggle" href="http://www.dam-gmbh.de/en/gas-carburising/luiso-w30.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">
                                     W30
                                   </a>
                                 </li>
@@ -204,7 +240,7 @@
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Washable after warm treatment?
+                    Washable after heat treatment?
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -259,164 +295,18 @@
           </ul>
         </div>
 
-        </div>
+      </div>
 
-      </nav>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="container otherProductsInfo">
+      <p class="mb-5 p-3 p-sm-0">We can provide you with high quality quenching oils as well other consumables in heat treatment industry. Feel free to contact us for more information.</p>
     </div>
-  
+  </div>
 
 </div>
 
 <?php include 'shared/footer.php'; ?>
 
-<!-- <div class="container">
-    <div class="row mb-5">
-      <h3 class="mx-auto">LUISO</h3>
-      <div class="table-responsive">
-        <table class="table table-bordered otherProducts">
-
-          <tr>
-            <th rowspan="2">Nitriding &amp; Nitrocarburizing</th>
-            <td>On a ceramic basis</td>
-            <td><a href="#">W21</a></td>
-          </tr>
-          <tr>
-            <td>Based on metal: TIN</td>
-            <td><a href="#">W25</a></td>
-          </tr>
-
-          <tr>
-            <th rowspan="2">Plasma</th>
-            <td>On a ceramic basis</td>
-            <td><a href="#">W53</a></td>
-          </tr>
-          <tr>
-            <td>Based on metal: Copper</td>
-            <td><a href="#">W51</a></td>
-          </tr>
-
-          <tr>
-            <th rowspan="4">Gas Carburizing</th>
-            <td rowspan="4">Washable after warm treatment?</td>
-            <td rowspan="2">Yes</td>
-            <td rowspan="2">On borbaris?</td>
-            <td>Ja: <a href="#">W31</a></td>
-          </tr>
-          <tr>
-            <td>Nein: <a href="#">W30</a></td>
-          </tr>
-          <tr>
-            <td rowspan="2">No</td>
-            <td>Residues can be removed by brushing</td>
-            <td><a href="#">W34</a></td>
-          </tr>
-          <tr>
-            <td>Only sandblasting</td>
-            <td><a href="#">W36</a></td>
-          </tr>
-
-          <tr>
-            <th rowspan="2">Oxidation &amp; Glow</th>
-            <td>Spreadable?</td>
-            <td><a href="#">W61</a></td>
-          </tr>
-          <tr>
-            <td>Seal/Kneadable mass?</td>
-            <td><a href="#">W63</a></td>
-          </tr>
-
-          <tr>
-            <th rowspan="2">Vacuum Carburizing</th>
-            <td rowspan="2">Washable after warm treatment?</td>
-            <td>Yes</td>
-            <td><a href="#">W44</a></td>
-          </tr>
-          <tr>
-            <td>No</td>
-            <td><a href="#">W45</a></td>
-          </tr>
-
-          <tr>
-            <th>Induction hardening &amp; Harlots</th>
-            <td>On a ceramic basis</td>
-            <td><a href="#">W71</a></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div> -->
-
-
-
-<!-- <div class="container">
-    <div class="row mb-5">
-      <nav class="navbar navbar-expand-xl navbar-light bg-light w-100 otherProducts">
-        <span class="navbar-brand">LUISO</span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav multi-level">
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Nitriding&amp;Nitrocarburizing
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">On a ceramic basis</a>
-                <a class="dropdown-item" href="#">Based on metal: TIN</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plasma
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">On a ceramic basis</a>
-                <a class="dropdown-item" href="#">Based on metal: Copper</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gas Carburizing
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Washable after warm treatment?</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Oxidation&amp;Glow
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Spreadable?</a>
-                <a class="dropdown-item" href="#">Seal/Kneadable mass?</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vacuum Carburizing
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Washable after warm treatment?</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown pr-2">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Induction hardening&amp;Harlots
-              </a>
-              <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">On a ceramic basis</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div> -->

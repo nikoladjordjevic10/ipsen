@@ -11,6 +11,7 @@ body, html {
   color: $light-grey;
   height: 100%;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 p, ul, li, ol {
@@ -423,7 +424,8 @@ h2 {
   .card-img-top {
     padding: 1rem;
     border-bottom: 1px solid rgba(0,0,0,.125);
-    // object-fit: cover;
+    height: 40vh;
+    object-fit: cover;
   }
   a>.card-img-top {
     filter: brightness(100%);
@@ -508,15 +510,48 @@ span.details {
 
 // Other Products Page Styling
 
-table.otherProducts {
-  th, td {
-    vertical-align: middle;
-    text-align: center;
+.otherProductsInfo {
+  font-size: 1.2rem;
+  #grids {
+    margin-bottom: 4rem;
+  }
+  ul li {
+    font-size: 1.1rem;
+    line-height: 2;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background-color: $bg-light;
+    list-style-type: none;
+    a {
+      color: inherit;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $dark-grey;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  h4 {
+    color: $dark-grey;
+  }
+  .gridsBaskets { 
+    img {
+      padding: 1.5rem;
+      object-fit: contain;
+      width: 100%;
+    }
+    figcaption {
+      font-variant: small-caps;
+      text-align: center;
+    }
   }
 }
 
+
+
 nav.otherProducts {
     background-color: $grey!important;
+    margin-bottom: 8.5rem;
   .dropdown-toggle::after { 
     content: none; 
   } 
@@ -593,9 +628,12 @@ nav.otherProducts {
 }
 
 @media (max-width: 1200px){
-  nav.otherProducts .navbar-nav.main-nav li.nav-item a {
-    &:hover, &:focus-within {
-      transform: scale(1.00);
+  nav.otherProducts {
+    margin-bottom: 3rem;
+    .navbar-nav.main-nav li.nav-item a {
+      &:hover, &:focus-within {
+        transform: scale(1.00);
+      }
     }
   }
 }
