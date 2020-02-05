@@ -637,3 +637,38 @@ nav.otherProducts {
     }
   }
 }
+
+// About Us Page Styling
+
+.about {
+  margin-bottom: 6rem;
+  p>span{
+    color: $dark-grey;
+  }
+  .aboutImage {
+    position: relative;
+  }
+  .contactFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: $red;
+    text-align: center;
+    padding-top: 0.7rem;
+    color: $bg-light;
+    transition: all 0.3s ease;
+    a {
+      display: block;
+      &:visited {
+        color: $bg-light;
+      }
+    }
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+}
