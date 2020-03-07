@@ -9,7 +9,7 @@
     <div class="row mb-5">
       <div class="offset-md-1"></div>
       <?php foreach($allData as $data): ?>
-        <div class="col-12 col-md-5 col-lg-5 text-center pt-3 pb-5">
+        <div class="col-12 col-md-5 col-lg-5 text-center pt-3 pb-5 px-4 px-md-3">
           <div class="card shadow">
             <a href="singleEquipment.php?id=<?= $data['id']; ?>"><img src="<?= $data['image']; ?>" class="card-img-top" alt="Ipsen"></a>
             <div class="card-body my-3">

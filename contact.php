@@ -15,7 +15,7 @@
           <p>Fax: +381 11 3016653</p>
           <p>&nbsp;</p>
           <p class="heading">Email</p>
-          <p><a href="#">pokerznik@sezampro.rs</a></p>
+          <p><a href="contact.php">ivan.pokerznik@ibptermotehnika.com</a></p>
           <p>&nbsp;</p>
           <p class="heading">Opening Hours</p>
           <p>Mon - Fri: 8am - 4pm</p>

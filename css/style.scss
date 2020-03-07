@@ -230,13 +230,63 @@ header {
   }
 }
 
+.linkBoxes {
+  background-color: $bg-light;
+  a {
+    color: $light-grey;
+  }
+  .box {
+    text-align: center;
+    margin: 5rem 0;
+    min-height: 14.5rem;
+    transition: all 0.2s ease;
+    &:hover {
+      transition: all 0.2s ease;
+      opacity: 0.7;
+      color: $dark-grey;
+    }
+    .boxHeader {
+      text-transform: uppercase;
+      background-color: $red;
+      color: $bg-light;
+    }
+    .boxBody {
+      background-color: $bg-light;
+    }
+}
+}
+
+@media (max-width: 991px){
+  .linkBoxes {
+    .box {
+      min-height: 16rem;
+    }
+  }
+}
+
 @media (max-width: 810px){
   .heroImage .heroText {
     .heading {
       font-size: 2rem;
     }
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
+    }
+  }
+  .linkBoxes {
+    .box {
+      margin: 3rem 0 0 0;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .linkBoxes {
+    .col-12 {
+      padding: 0 2rem;
     }
   }
 }
@@ -247,7 +297,7 @@ header {
       font-size: 1.5rem;
     }
     p {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
   }
 }
@@ -255,10 +305,10 @@ header {
 @media (max-width: 415px){
   .heroImage .heroText {
     .heading {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
 }
@@ -274,6 +324,7 @@ header {
     padding: 0;
     margin: 0;
     font-size: 0.8rem;
+    text-align: center;
     a, a:visited {
       color: $bg-light;
       transition: all 0.15s ease-in;
@@ -360,6 +411,7 @@ h2 {
     color: $red;
   }
   a {
+    word-wrap: break-word;
     color: $light-grey;
     transition: color 0.25s ease;
     &:hover {
@@ -406,7 +458,7 @@ h2 {
 }
 
 @media (max-width: 768px){
-  .contactForm .fields .btn.btn-primary, .contactForm .info {
+  .contactForm .fields .btn.btn-default, .contactForm .info {
     margin-bottom: 3rem;
   }
   
@@ -424,15 +476,23 @@ h2 {
   .card-img-top {
     padding: 1rem;
     border-bottom: 1px solid rgba(0,0,0,.125);
-    height: 40vh;
+    height: 50vh;
     object-fit: cover;
   }
   a>.card-img-top {
     filter: brightness(100%);
     transition: all 0.25s ease-in;
     &:hover {
-      filter: brightness(90%);
+      filter: brightness(80%);
       transition: all 0.25s ease-in;
+    }
+  }
+}
+
+@media (min-width: 568px) and (max-width: 812px) and (orientation: landscape){
+  .card {
+    .card-img-top {
+      height: 90vh;
     }
   }
 }
@@ -478,13 +538,12 @@ span.details {
 .imageBig {
   margin: 1rem 0;
   padding: 1rem;
-  max-height: 70vh;
+  height: 70vh;
   background-color: #fff;
   overflow: hidden;
   border: 1px solid rgba(0,0,0,.125);
   img {
-    max-width: 100%;
-    height: auto;
+    min-width: 100%;
     margin-right: 1rem;
     object-fit: cover;
     transition: transform 0.7s ease-in-out;
@@ -508,10 +567,32 @@ span.details {
   }
 }
 
+@media (max-width: 768px){
+  .row.details {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .imagesNav {
+    margin-right: 0;
+  }
+  .imageBig {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1023px) and (orientation: landscape){
+  .imageBig {
+    height: 90vh;
+  }
+}
+
 // Other Products Page Styling
 
 .otherProductsInfo {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   #grids {
     margin-bottom: 4rem;
   }
@@ -535,19 +616,20 @@ span.details {
     color: $dark-grey;
   }
   .gridsBaskets { 
+    max-height: 40vh;
     img {
       padding: 1.5rem;
       object-fit: contain;
       width: 100%;
+      height: 100%;
     }
     figcaption {
       font-variant: small-caps;
       text-align: center;
+      margin-top: 0.5rem;
     }
   }
 }
-
-
 
 nav.otherProducts {
     background-color: $grey!important;
@@ -638,10 +720,19 @@ nav.otherProducts {
   }
 }
 
+@media (max-width: 1023px) and (orientation: landscape){
+  .otherProductsInfo {
+    .gridsBaskets {
+      max-height: 80vh;
+    }
+  }
+}
+
+
 // About Us Page Styling
 
 .about {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   p>span{
     color: $dark-grey;
   }
@@ -661,6 +752,7 @@ nav.otherProducts {
     transition: all 0.3s ease;
     a {
       display: block;
+      color: $bg-light;
       &:visited {
         color: $bg-light;
       }
@@ -670,5 +762,62 @@ nav.otherProducts {
       cursor: pointer;
       transition: all 0.3s ease;
     }
+  }
+}
+
+@media (max-width: 768px){
+  .about {
+    margin-bottom: 1rem;
+  }
+}
+
+// Ipsen Page Styling
+
+.ipsenInfo {
+  p>span {
+    color: $dark-grey;
+  }
+}
+
+.ipsenProducts {
+  margin-bottom: 5rem;
+}
+
+.ipsenAtmosphere, .ipsenVacuum {
+  .img-thumbnail {
+    max-width: 30%;
+    border-radius: 0;
+  }
+  .list-group-item.active {
+    background-color: $red;
+    border: none;
+  }
+  .list-group-item {
+    a {
+      transition: all 0.25s ease;
+      color: $light-grey;
+      &:visited {
+        color: $light-grey;
+      }
+      &:hover {
+        color: $dark-grey;
+        transition: all 0.25s ease;
+      }
+    }
+    &:first-child, &:last-child {
+      border-radius: 0;
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .ipsenProducts {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px){
+  .ipsenProducts {
+    margin-bottom: 3rem;
   }
 }

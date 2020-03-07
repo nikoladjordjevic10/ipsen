@@ -2,15 +2,15 @@
     <div class="footerUpper">
       <div class="container">
         <div class="row justify-content-between flex-column flex-lg-row align-items-center">
-          <div class="contact p-3">
+          <div class="contact p-4">
             <p><i class="fas fa-phone-alt pb-2 pr-3"></i>Call Us</p>
             <p>Tel: +381 11 3016666 &nbsp;|&nbsp; Fax: +381 11 3016653</p>
           </div>
-          <div class="contact p-3">
+          <div class="contact p-4">
             <p><i class="far fa-envelope pb-2 pr-3"></i>Email Us</p>
-            <p><a href="#">pokerznik@sezampro.rs</a></p>
+            <p><a href="contact.php">ivan.pokerznik@ibptermotehnika.com</a></p>
           </div>
-          <div class="contact p-3">
+          <div class="contact p-4">
             <p><i class="far fa-clock pb-2 pr-3"></i>Opening Hours</p>
             <p>Mon - Fri: 8am - 4pm</p>
           </div>

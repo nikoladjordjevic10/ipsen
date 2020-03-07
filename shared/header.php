@@ -22,7 +22,7 @@
         <nav class="nav align-items-center d-flex flex-column flex-lg-row py-3">
           <a class="main-link nav-link" href="index.php">Home</a>
           <a class="main-link nav-link" href="about.php">About Us</a>
-          <a class="main-link nav-link" href="#">Ipsen</a>
+          <a class="main-link nav-link" href="ipsen.php">Ipsen</a>
           <a class="main-link nav-link" href="usedEquipment.php">Used Equipment</a>
           <a class="main-link nav-link" href="otherProducts.php">Other Products</a>
           <a class="main-link nav-link" href="contact.php">Contact</a>
