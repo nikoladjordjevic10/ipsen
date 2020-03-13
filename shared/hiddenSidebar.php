@@ -7,4 +7,8 @@
     <a class="nav-link" href="otherProducts.php">Other Products</a>
     <a class="nav-link" href="contact.php">Contact</a>
   </nav>
+  <div class="btn-group hidden" role="group" aria-label="Basic example">
+    <a href="?lang=en" type="button" class="btn btn-language en"></a> &nbsp;&nbsp;&nbsp;
+    <a href="?lang=sr" type="button" class="btn btn-language sr"></a>
+  </div>
 </div>

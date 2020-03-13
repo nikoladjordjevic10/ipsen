@@ -48,6 +48,7 @@ a {
 
 header {
   background-color: $bg-light;
+  position: relative;
   .logo img {
     max-height: 5rem;
   }
@@ -66,6 +67,25 @@ header {
   .current, .main-link.nav-link.disabled {
     color: $red;
     border-bottom: 2px solid $red;
+  }
+  .btn-group {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    width: 5rem;
+    height: 2.5rem;
+    .btn-language.en {
+      background-image: url('../images/en.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .btn-language.sr {
+      background-image: url('../images/sr.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -156,12 +176,15 @@ header {
     position: fixed;
     right: -5000px;
   }
+  .btn-group.hidden {
+    opacity: 0;
+  }
 }
 
 .hiddenSidebar.expanded {
   transition: all .35s;
   text-align: center;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   border-radius: 0px;
   top: 0;
@@ -187,8 +210,30 @@ header {
         color: $light-grey;
      }
   }
-  
+  .btn-group.hidden {
+    opacity: 1;
+    transition: opacity 0.35s 0.25s;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    height: 2.5rem;
+    .btn-language.en {
+      background-image: url('../images/en.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .btn-language.sr {
+      background-image: url('../images/sr.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
+
+
 
 // M A I N  C O N T E N T
 // Hero Image Styling

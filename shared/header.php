@@ -29,6 +29,10 @@
         </nav>
       </div>
     </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <a href="?lang=en" type="button" class="btn btn-language en"></a> &nbsp;&nbsp;
+      <a href="?lang=sr" type="button" class="btn btn-language sr"></a>
+    </div>
   </header> <!-- End of Header -->
 
   <header class="headerInvisible"> <!-- Start of Invisible Header -->
