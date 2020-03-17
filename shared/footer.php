@@ -3,16 +3,16 @@
       <div class="container">
         <div class="row justify-content-between flex-column flex-lg-row align-items-center">
           <div class="contact p-4">
-            <p><i class="fas fa-phone-alt pb-2 pr-3"></i>Call Us</p>
+            <p><i class="fas fa-phone-alt pb-2 pr-3"></i><?= $footer['callUs']; ?></p>
             <p>Tel: +381 11 3016666 &nbsp;|&nbsp; Fax: +381 11 3016653</p>
           </div>
           <div class="contact p-4">
-            <p><i class="far fa-envelope pb-2 pr-3"></i>Email Us</p>
+            <p><i class="far fa-envelope pb-2 pr-3"></i><?= $footer['emailUs']; ?></p>
             <p><a href="contact.php">ivan.pokerznik@ibptermotehnika.com</a></p>
           </div>
           <div class="contact p-4">
-            <p><i class="far fa-clock pb-2 pr-3"></i>Opening Hours</p>
-            <p>Mon - Fri: 8am - 4pm</p>
+            <p><i class="far fa-clock pb-2 pr-3"></i><?= $footer['openingHoursTitle']; ?></p>
+            <p><?= $footer['openingHoursBody']; ?></p>
           </div>
         </div>  
       </div>
@@ -22,29 +22,29 @@
         <div class="row justify-content-between">
           
           <div class="col-lg-4 col-md-12 info py-md-4 p-4">
-            <p>Over 20 years experience</p>
-            <p>IBP Termotehnika doo is a family business with over 20 years of experience as a supplier in the heat treatment industry. We strive to provide our customers with the best possible solutions and equipment for their heat treatment needs.</p>
+            <p><?= $footer['experienceTitle']; ?></p>
+            <p><?= $footer['experienceBody']; ?></p>
           </div>
           <div class="col-lg-3 col-md-12 info py-md-4 p-4">
-            <p>Our Services</p>
+            <p><?= $footer['ourServices']; ?></p>
             <ul>
-              <li>New &amp; Used equipment</li>
-              <li>Services</li>
-              <li>Original spare parts</li>
-              <li>High-quality baskets</li>
-              <li>Grids</li>
-              <li>Stop off coatings</li>
+              <li><?= $footer['equipment']; ?></li>
+              <li><?= $footer['services']; ?></li>
+              <li><?= $footer['spareParts']; ?></li>
+              <li><?= $footer['baskets']; ?></li>
+              <li><?= $footer['grids']; ?></li>
+              <li><?= $footer['coatings']; ?></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-12 info py-md-4 p-4">
-            <p>Visit Us</p>
-            <p>Nehruova 56/15, <br> 11073 Novi Beograd, Srbija</p>
+            <p><?= $footer['visitUsTitle']; ?></p>
+            <p><?= $footer['visitUsBody']; ?></p>
           </div>
         </div>
       </div>
     </div>
     <div class="footerCredits">
-      <p><a href="index.php">IBP Termotehnika</a> <?php echo date('Y') ?>. All Rights Reserved</p>
+      <p><a href="index.php">IBP Termotehnika</a> <?php echo date('Y') ?>. <?= $footer['rights']; ?></p>
     </div>
   </footer> <!-- End of Footer -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

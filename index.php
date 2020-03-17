@@ -3,8 +3,8 @@
 
 <section class="heroImage content">
   <div class="heroText">
-    <p class="heading mb-3">IBP Termotehnika</p>
-    <p>Is a family business with over 20 years of experience as a supplier in the heat treatment industry.</p>
+    <p class="heading mb-3"><?= $home['heroTitle']; ?></p>
+    <p><?= $home['heroBody']; ?></p>
   </div>
 </section>
 
@@ -16,10 +16,10 @@
         <a href="ipsen.php">
           <div class="box shadow">
             <div class="boxHeader p-3">
-              <p>New equipment</p>
+              <p><?= $home['newTitle']; ?></p>
             </div>
             <div class="boxBody py-5 px-3">
-              <p>We can provided You with best solutions for Your heat treatment needs! Contact us!</p>
+              <p><?= $home['newBody']; ?></p>
             </div>
           </div>
         </a>
@@ -29,10 +29,10 @@
         <a href="usedEquipment.php">
           <div class="box shadow">
             <div class="boxHeader p-3">
-              <p>Used equipment</p>
+              <p><?= $home['usedTitle']; ?></p>
             </div>
             <div class="boxBody py-5 px-3">
-              <p>All types of used furnaces, no matter if You are looking to buy or sell, give us a call!</p>
+              <p><?= $home['usedBody']; ?></p>
             </div>
           </div>
         </a>
@@ -42,10 +42,10 @@
         <a href="otherProducts.php">
           <div class="box shadow mb-5">
             <div class="boxHeader p-3">
-              <p>Other products</p>
+              <p><?= $home['otherTitle']; ?></p>
             </div>
             <div class="boxBody py-5 px-3">
-              <p>High quality coatings, spare parts, grids and baskets!</p>
+              <p><?= $home['otherBody']; ?></p>
             </div>
           </div>
         </a>

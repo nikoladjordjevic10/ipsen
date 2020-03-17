@@ -7,21 +7,40 @@
   if(isGetRequest()){
     
     $id = $_GET['id'] ?? '';
-   
-    foreach ($allData as $data){
-      if($data['id'] == $id){
-        $singleData['id'] = $data['id'];
-        $singleData['make'] = ucfirst($data['make']);
-        $singleData['type'] = ucfirst($data['type']);
-        $singleData['model'] = strtoupper($data['model']);
-        $singleData['year'] = $data['year'];
-        $singleData['heating'] = ucfirst($data['heating']);
-        $singleData['description'] = formatSentence($data['description']);
-        $singleData['condition'] = formatSentence($data['condition']);
-        $singleData['delivery'] = ucfirst($data['delivery']);
-        $singleData['price'] = $data['price'];
-        $singleData['image'] = $data['image'];
-        $singleData['images'] = $data['images'];
+    
+    if($_GET['lang'] === 'en'){
+      foreach ($allDataEN as $data){
+        if($data['id'] == $id){
+          $singleData['id'] = $data['id'];
+          $singleData['make'] = ucfirst($data['make']);
+          $singleData['type'] = ucfirst($data['type']);
+          $singleData['model'] = strtoupper($data['model']);
+          $singleData['year'] = $data['year'];
+          $singleData['heating'] = ucfirst($data['heating']);
+          $singleData['description'] = formatSentence($data['description']);
+          $singleData['condition'] = formatSentence($data['condition']);
+          $singleData['delivery'] = ucfirst($data['delivery']);
+          $singleData['price'] = $data['price'];
+          $singleData['image'] = $data['image'];
+          $singleData['images'] = $data['images'];
+        }
+      }
+    } else {
+      foreach ($allDataSR as $data){
+        if($data['id'] == $id){
+          $singleData['id'] = $data['id'];
+          $singleData['make'] = ucfirst($data['make']);
+          $singleData['type'] = ucfirst($data['type']);
+          $singleData['model'] = strtoupper($data['model']);
+          $singleData['year'] = $data['year'];
+          $singleData['heating'] = ucfirst($data['heating']);
+          $singleData['description'] = formatSentence($data['description']);
+          $singleData['condition'] = formatSentence($data['condition']);
+          $singleData['delivery'] = ucfirst($data['delivery']);
+          $singleData['price'] = $data['price'];
+          $singleData['image'] = $data['image'];
+          $singleData['images'] = $data['images'];
+        }
       }
     }
 
@@ -36,8 +55,8 @@
   <div class="stripe"></div>
   <div class="container">
     <div class="row justify-content-between details">
-      <h3 class="order-2 order-md-1">Details for : <span class="details"><?= $singleData['make'] . " - " . $singleData['model']; ?></span></h3>
-      <a href="usedEquipment.php" class="btn btn-default order-1 order-md-2 mb-4 mb-md-0">Back</a>
+      <h3 class="order-2 order-md-1"><?= $singleEquipment['title']; ?><span class="details"><?= $singleData['make'] . " - " . $singleData['model']; ?></span></h3>
+      <a href="usedEquipment.php?lang=<?= $lang; ?>" class="btn btn-default order-1 order-md-2 mb-4 mb-md-0"><?= $singleEquipment['back']; ?></a>
       </div>
   </div>
   
@@ -60,45 +79,45 @@
       <div class="col-md-5 mt-5 mt-md-3 pl-3 pl-lg-5 singleDetails">
         <table class="table">
           <tr>
-            <th>Make</th>
+            <th><?= $singleEquipment['make']; ?></th>
             <td><?= $singleData['make']; ?></td>
           </tr>
           <tr>
-            <th>Type</th>
+            <th><?= $singleEquipment['type']; ?></th>
             <td><?= $singleData['type']; ?></td>
           </tr>
           <tr>
-            <th>Model</th>
+            <th><?= $singleEquipment['model']; ?></th>
             <td><?= $singleData['model']; ?></td>
           </tr>
           <tr>
-            <th>Year</th>
+            <th><?= $singleEquipment['year']; ?></th>
             <td><?= $singleData['year']; ?></td>
           </tr>
           <tr>
-            <th>Heating</th>
+            <th><?= $singleEquipment['heating']; ?></th>
             <td><?= $singleData['heating']; ?></td>
           </tr>
           <tr>
-            <th>Description</th>
+            <th><?= $singleEquipment['description']; ?></th>
             <td><?= $singleData['description']; ?></td>
           </tr>
           <tr>
-            <th>Condition</th>
+            <th><?= $singleEquipment['condition']; ?></th>
             <td><?= $singleData['condition']; ?></td>
           </tr>
           <tr>
-            <th>Delivery</th>
+            <th><?= $singleEquipment['delivery']; ?></th>
             <td><?= $singleData['delivery']; ?></td>
           </tr>
           <tr>
-            <th>Price</th>
+            <th><?= $singleEquipment['price']; ?></th>
             <td><?= $singleData['price']; ?></td>
           </tr>
         </table>
       </div>  
       <?php else: ?>
-      <?php redirectTo('usedEquipment.php'); ?>
+      <?php redirectTo('usedEquipment.php?lang=' . $lang); ?>
       <?php endif; ?>
   </div>
 </div>

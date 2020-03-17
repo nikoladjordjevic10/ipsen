@@ -1,3 +1,4 @@
+<?php require 'staff/langInit.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,12 +21,12 @@
           <a href="index.php"><img src="images/logo.png" alt="logo"></a>
         </div>
         <nav class="nav align-items-center d-flex flex-column flex-lg-row py-3">
-          <a class="main-link nav-link" href="index.php">Home</a>
-          <a class="main-link nav-link" href="about.php">About Us</a>
-          <a class="main-link nav-link" href="ipsen.php">Ipsen</a>
-          <a class="main-link nav-link" href="usedEquipment.php">Used Equipment</a>
-          <a class="main-link nav-link" href="otherProducts.php">Other Products</a>
-          <a class="main-link nav-link" href="contact.php">Contact</a>
+          <a class="main-link nav-link" href="index.php?lang=<?= $lang; ?>"><?= $header['home']; ?></a>
+          <a class="main-link nav-link" href="about.php?lang=<?= $lang; ?>"><?= $header['about']; ?></a>
+          <a class="main-link nav-link" href="ipsen.php?lang=<?= $lang; ?>"><?= $header['ipsen']; ?></a>
+          <a class="main-link nav-link" href="usedEquipment.php?lang=<?= $lang; ?>"><?= $header['usedEquipment']; ?></a>
+          <a class="main-link nav-link" href="otherProducts.php?lang=<?= $lang; ?>"><?= $header['otherProducts']; ?></a>
+          <a class="main-link nav-link" href="contact.php?lang=<?= $lang; ?>"><?= $header['contact']; ?></a>
         </nav>
       </div>
     </div>

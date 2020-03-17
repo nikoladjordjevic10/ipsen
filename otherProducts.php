@@ -3,30 +3,30 @@
 
 <div class="content">
   <div class="stripe"></div>
-  <h2>Other Products</h2>
+  <h2><?= $otherProducts['title']; ?></h2>
   <div class="row mb-3 p-3 p-sm-0">
     <div class="container otherProductsInfo">
-      <p class="mb-4">IBP Termotehnika doo offers only the highest quality products for your heat treatment needs such as:</p>
+      <p class="mb-4"><?= $otherProducts['body']; ?></p>
       <ul class="mb-5">
-        <li><a href="#grids">Grids &amp; Baskets</a></li>
-        <li><a href="#coatings">Stop off coatings</a></li>
-        <li>Quenching oils</li>
-        <li>And others</li>
+        <li><a href="#grids"><?= $otherProducts['nav1']; ?></a></li>
+        <li><a href="#coatings"><?= $otherProducts['nav2']; ?></a></li>
+        <li><?= $otherProducts['nav3']; ?></li>
+        <li><?= $otherProducts['nav4']; ?></li>
       </ul>
       
       <div id="grids">
-        <h4 class="mb-4">Grids &amp; Baskets</h4>
-        <p class="mb-4">We can provide you with high-quality cast baskets, grids and other types of loading materials for all types of furnaces. Just give us Your furnace info and/or drawing of grids or baskets that you need!</p>
+        <h4 class="mb-4"><?= $otherProducts['gridsBasketsTitle']; ?></h4>
+        <p class="mb-4"><?= $otherProducts['gridsBasketsBody']; ?></p>
         <div class="container">
           <div class="row justify-content-around p-3 p-md-0">
 
             <div class="col-md-5 p-0 shadow gridsBaskets">
               <img src="images/grid.jpg" alt="grid.jpg">
-              <figcaption>Heat Treatment Grids</figcaption>
+              <figcaption><?= $otherProducts['gridsBasketsImg1']; ?></figcaption>
             </div>
             <div class="col-md-5 p-0 mt-5 mt-md-0 shadow gridsBaskets">
               <img src="images/basket.jpg" alt="basket.jpg">
-              <figcaption>Heat Treatment Baskets</figcaption>
+              <figcaption><?= $otherProducts['gridsBasketsImg2']; ?></figcaption>
             </div>
 
           </div>
@@ -34,9 +34,8 @@
       </div>
       
       <div id="coatings" class="mb-4">
-        <h4 class="mb-4">Stop off coatings</h4>
-        <p>When it comes to stop-off coatings we can provide You with high-quality coatings from both AVION and DAM Härtetechnik companies for all Your heat treatment needs: <br>
-          If You are not sure which type of coating you need please use the diagram (bellow this text) to find the right product for your needs!</p>
+        <h4 class="mb-4"><?= $otherProducts['coatingsTitle']; ?></h4>
+        <p><?= $otherProducts['coatingsBody']; ?></p>
       </div>
 
     </div>
@@ -54,12 +53,12 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Nitriding&amp;Nitrocarburising
+              <?= $otherProducts['nitriding']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    On a ceramic basis
+                  <?= $otherProducts['ceramic']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -71,7 +70,7 @@
                 </li>
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Based on metal: TIN
+                  <?= $otherProducts['metal']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -86,12 +85,12 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plasmanitriding
+              <?= $otherProducts['plasma']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    On a ceramic basis
+                  <?= $otherProducts['ceramic']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -103,7 +102,7 @@
                 </li>
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Based on metal: Copper
+                  <?= $otherProducts['copper']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -118,27 +117,27 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gas Carburizing
+              <?= $otherProducts['gas']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Washable after heat treatment?
+                  <?= $otherProducts['gasWashable']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Yes
+                      <?= $otherProducts['washableOption1']; ?>
                       </a>
                       <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                         <li class="dropdown-item dropdown-submenu py-0 px-2">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Boron-based?
+                          <?= $otherProducts['boron']; ?>
                           </a>
                           <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                             <li class="dropdown-item dropdown-submenu py-0 px-2">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Yes
+                              <?= $otherProducts['boronSuboption1']; ?>
                               </a>
                               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                                 <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -150,7 +149,7 @@
                             </li>
                             <li class="dropdown-item dropdown-submenu py-0 px-2">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                No
+                              <?= $otherProducts['boronSuboption2']; ?>
                               </a>
                               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                                 <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -166,12 +165,12 @@
                     </li>
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        No
+                      <?= $otherProducts['washableOption2']; ?>
                       </a>
                       <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                         <li class="dropdown-item dropdown-submenu py-0 px-2">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Residues can be removed by brushing
+                          <?= $otherProducts['washableSuboption1']; ?>
                           </a>
                           <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                             <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -183,7 +182,7 @@
                         </li>
                         <li class="dropdown-item dropdown-submenu py-0 px-2">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Only sandblasting
+                          <?= $otherProducts['washableSuboption2']; ?>
                           </a>
                           <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                             <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -203,12 +202,12 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Oxidation&amp;Annealing
+              <?= $otherProducts['oxidation']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Spreadable?
+                  <?= $otherProducts['spreadable']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -220,7 +219,7 @@
                 </li>
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Seal/Kneadable mass?
+                  <?= $otherProducts['sealmass']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item py-0 px-2">
@@ -235,17 +234,17 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vacuum Carburizing
+              <?= $otherProducts['vacuum']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Washable after heat treatment?
+                  <?= $otherProducts['vacuumWashable']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Yes
+                      <?= $otherProducts['vacuumOption1']; ?>
                       </a>
                       <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                         <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -257,7 +256,7 @@
                     </li>
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        No
+                      <?= $otherProducts['vacuumOption2']; ?>
                       </a>
                       <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                         <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -274,12 +273,12 @@
 
             <li class="nav-item dropdown multi-level-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Brazing&amp;Induction Hardening
+              <?= $otherProducts['brazing']; ?>
               </a>
               <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                 <li class="dropdown-item dropdown-submenu py-0 px-2">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    On a ceramic basis
+                  <?= $otherProducts['ceramic']; ?>
                   </a>
                   <ul class="dropdown-menu rounded-0 z-depth-1 animate slideIn">
                     <li class="dropdown-item dropdown-submenu py-0 px-2">
@@ -302,7 +301,7 @@
 
   <div class="row">
     <div class="container otherProductsInfo">
-      <p class="mb-5 p-3 p-sm-0">We can provide you with high quality quenching oils as well other consumables in heat treatment industry. Feel free to contact us for more information.</p>
+      <p class="mb-5 p-3 p-sm-0"><?= $otherProducts['luisoBody']; ?></p>
     </div>
   </div>
 
