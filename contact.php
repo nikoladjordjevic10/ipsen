@@ -25,6 +25,8 @@
           <form action="<?= $_SERVER['PHP_SELF'] . '?lang=' . $lang; ?>" method="POST">
           <?php if(isset($success)): ?>
             <div class="alert alert-success" role="alert"><?= $success; ?></div>
+          <?php elseif(isset($failure)): ?>
+            <div class="alert alert-danger" role="alert"><?= $failure; ?></div>
           <?php endif; ?>
             <div class="form-group">
               <label for="name"><?= $contact['name']; ?> <span class="required">*</span></label>

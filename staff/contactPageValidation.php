@@ -1,5 +1,10 @@
 <?php
-require_once('functions.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'functions.php';
+require 'vendor/autoload.php';
 
 $errors = [];
 $name = $email = $subject = $message = '';
@@ -71,12 +76,44 @@ if (isPostRequest()) {
   }
 
   if(empty($errors)){
-    if($lang === 'en'){
-      $success = "Your message has been sent. Thanks for contacting us";
-    } else {
-      $success = "Poruka uspešno poslata. Hvala što ste nas kontaktirali";
+    
+    $mail = new PHPMailer(true);
+
+    try {
+      $mail->isSMTP();                                            
+      $mail->Host       = 'smtp.mailtrap.io';                    
+      $mail->SMTPAuth   = true;                                  
+      $mail->Username   = 'a9bfcb7850e376';                    
+      $mail->Password   = 'a60115fa80865b';                             
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
+      $mail->Port       = 587;  
+      
+      $mail->setFrom($email, $name);
+      $mail->addAddress('105f12a5b5-66432b@inbox.mailtrap.io');     
+
+      
+      $mail->isHTML(true);                                  
+      $mail->Subject = $subject;
+      $mail->Body    = $message;
+      
+      if($mail->send()) {
+        if($lang === 'en'){
+          $success = "Your message has been sent. Thanks for contacting us";
+        } else {
+          $success = "Poruka uspešno poslata. Hvala što ste nas kontaktirali";
+        }
+      }
+
+    } catch (Exception $e) {
+      if($lang === 'en'){
+        $failure = "Message not sent. Please try again.";
+      } else {
+        $failure = "Poruka nije poslata. Molimo vas pokušajte ponovo.";
+      }
     }
+
     $name = $email = $subject = $message = '';
+
   }
   
 }
@@ -86,5 +123,3 @@ function sanitize($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-
-?>
