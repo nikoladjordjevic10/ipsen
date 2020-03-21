@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require_once 'functions.php';
+require_once '../private/config.php';
 require 'vendor/autoload.php';
 
 $errors = [];
@@ -83,13 +84,13 @@ if (isPostRequest()) {
       $mail->isSMTP();                                            
       $mail->Host       = 'smtp.mailtrap.io';                    
       $mail->SMTPAuth   = true;                                  
-      $mail->Username   = 'a9bfcb7850e376';                    
-      $mail->Password   = 'a60115fa80865b';                             
+      $mail->Username   = USERNAME;                    
+      $mail->Password   = PASSWORD;                             
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
       $mail->Port       = 587;  
       
       $mail->setFrom($email, $name);
-      $mail->addAddress('105f12a5b5-66432b@inbox.mailtrap.io');     
+      $mail->addAddress(EMAIL_ADRESS);     
 
       
       $mail->isHTML(true);                                  
